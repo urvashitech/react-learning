@@ -107,6 +107,7 @@ export default function PostForm({ post }) {
                         />
                     </div>
                 )}
+                
                 <Select
                     options={["active", "inactive"]}
                     label="Status"
