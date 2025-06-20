@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import State from './practice/State';
+import Exercise1 from './practice/Exercise1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App/> */}
-    <State/>
+    {/* <App/>
+    <State/> */}
+    <Exercise1/>
+    
   </React.StrictMode>
 );
 
