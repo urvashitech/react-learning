@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import State from './practice/State';
 import Exercise1 from './practice/Exercise1';
 import Ref from './practice/Ref';
+import Dom from './practice/Dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,8 +14,10 @@ root.render(
     {/* <App/>
     <State/> 
     <Exercise1/>
-    */}
     <Ref/>
+    */}
+    <Dom/>
+    
   </React.StrictMode>
 );
 
