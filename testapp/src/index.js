@@ -5,14 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import State from './practice/State';
 import Exercise1 from './practice/Exercise1';
+import Ref from './practice/Ref';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App/>
-    <State/> */}
+    <State/> 
     <Exercise1/>
-    
+    */}
+    <Ref/>
   </React.StrictMode>
 );
 
