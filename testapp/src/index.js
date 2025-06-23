@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -9,9 +9,13 @@ import Ref from './practice/Ref';
 import Dom from './practice/Dom';
 import Effect from './practice/Effect';
 import Reduce from './practice/Reduce';
+import Button from './component/button/Button';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
+  
   <React.StrictMode>
     {/* <App/>
     <State/> 
@@ -19,8 +23,9 @@ root.render(
     <Ref/>
     <Dom/>
     <Effect/>
-    */}
     <Reduce/>
+    */}
+    <Button />
     
     
   </React.StrictMode>
