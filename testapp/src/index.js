@@ -11,6 +11,7 @@ import Effect from './practice/Effect';
 import Reduce from './practice/Reduce';
 import Button from './component/button/Button';
 import {CounterContext} from './practice/context/Context'
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,11 +27,14 @@ root.render(
     <Effect/>
     <Reduce/>
     <Button />
-    */}
-    <CounterContext.Provider>
-      
-    </CounterContext.Provider>
     
+    <CounterContext.Provider>
+
+    </CounterContext.Provider>
+    */}
+    <BrowserRouter>
+    <App/>
+    </BrowserRouter>
     
     
   </React.StrictMode>
