@@ -10,6 +10,7 @@ import Dom from './practice/Dom';
 import Effect from './practice/Effect';
 import Reduce from './practice/Reduce';
 import Button from './component/button/Button';
+import {CounterContext} from './practice/context/Context'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -24,8 +25,12 @@ root.render(
     <Dom/>
     <Effect/>
     <Reduce/>
-    */}
     <Button />
+    */}
+    <CounterContext.Provider>
+      
+    </CounterContext.Provider>
+    
     
     
   </React.StrictMode>
