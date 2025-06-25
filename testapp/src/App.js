@@ -4,6 +4,8 @@ import { Route, Routes , NavLink} from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart';
 import About from './pages/About/About';
+import Login from './pages/Login/Login';
+import { Private } from './components/PrivateRoute/Private';
 
 const  Header = ()=>{
   return (
@@ -42,10 +44,13 @@ function App() {
       <NavLink to='/' style ={ getStyle}>Home</NavLink> || 
       <NavLink to='/cart' style ={ getStyle}>Cart</NavLink> || 
       <NavLink to='/about' style ={ getStyle}>About</NavLink> ||
+      <NavLink to='/login' style ={ getStyle}>Login</NavLink> 
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        <Private><Route path='/cart' element={<Cart/>}/></Private>
+        
         <Route path='/about' element={<About/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </div>
   );
