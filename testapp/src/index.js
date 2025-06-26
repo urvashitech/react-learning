@@ -13,6 +13,8 @@ import Button from './component/button/Button';
 import {CounterContext} from './practice/context/Context'
 import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './context/authContext';
+import { store } from './redux/store'; 
+import { Provider } from 'react-redux'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -28,17 +30,18 @@ root.render(
     <Effect/>
     <Reduce/>
     <Button />
-    
     <CounterContext.Provider>
-
-    </CounterContext.Provider>
-    */}
+    </CounterContext.Provider>   
     <BrowserRouter>
     <AuthProvider>
     <App/>
     </AuthProvider>
     </BrowserRouter>
-    
+    */}
+    <Provider store={store}>
+      <App />
+    </Provider>
+
     
   </React.StrictMode>
 );

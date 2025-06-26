@@ -6,6 +6,8 @@ import Cart from './pages/Cart/Cart';
 import About from './pages/About/About';
 import Login from './pages/Login/Login';
 import { Private } from './components/PrivateRoute/Private';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment , decrement  } from './redux/counter/counterSlice';
 
 const  Header = ()=>{
   return (
@@ -18,7 +20,7 @@ const  Header = ()=>{
 
 }
 function App() {
-  let count = 0 
+  /*let count = 0 
   const handleClickIncrement = ()=>{
     count+=1
     console.log(count)
@@ -32,7 +34,11 @@ function App() {
     color: isActive ? "red" : "",
     margin: "10px"
   };
-};
+};*/
+
+  // Redux CODE START FROM HERE 
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
   return (
     <div className='App'>
       {/* 
@@ -40,7 +46,7 @@ function App() {
       <h1>Hello {name} i am learning react</h1>
       <button onClick={handleClickIncrement} style={{background : "blue" , color: "white" , borderRadius : "20px"}}> Increment+</button>
       <input style={{background : "black" , color: "white" , marginLeft: "10px", marginTop: "10px", borderRadius : "15px"}} onChange={handleTextChange} placeholder='Type anything to print in the console '/>
-      */}
+      
       <NavLink to='/' style ={ getStyle}>Home</NavLink> || 
       <NavLink to='/cart' style ={ getStyle}>Cart</NavLink> || 
       <NavLink to='/about' style ={ getStyle}>About</NavLink> ||
@@ -52,6 +58,11 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/login' element={<Login/>}/>
       </Routes>
+      */}
+      <h1>Learning Redux in this segment</h1>
+      <button onClick={()=>dispatch(increment())}>+</button>
+      {count}
+      <button onClick={()=>dispatch(decrement())}>-</button>
     </div>
   );
 }
